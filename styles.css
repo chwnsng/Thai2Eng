@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* scrollbar-color: #d1cec5 transparent; */
+  scrollbar-color: #403a32 transparent;
+  scrollbar-width: thin;
+}
+
+body {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; */
+  margin: 0;
+  background-color: #373332;
+  font-family: "Inter", "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  /* padding-bottom: 80px; */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  /* margin-top: 90px; */
+  background-color: #373332;
+  font-family: "Inter", "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  /* padding-bottom: 80px; */
+}
+
+.output,
+.input {
+  position: relative;
+}
+
+.output {
+  scrollbar-color: #d1cec5 transparent;
+}
+
+.clr-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  right: 0;
+  bottom: 5px;
+  border-style: solid;
+  border-color: #403a32;
+  height: 40px;
+  background-color: #403a32;
+  color: #d1cec5;
+}
+
+.cp-btn {
+  position: absolute;
+  margin: 8px;
+  right: 0;
+  bottom: 5px;
+  border-style: solid;
+  border-color: #d1cec5;
+  height: 40px;
+}
+
+.snack {
+  visibility: hidden;
+  position: absolute;
+  /* transition: 300ms; */
+  right: 10px;
+  color: #eeba2a;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+}
+
+.snack.show {
+  visibility: visible;
+  position: absolute;
+  /* transition: 300ms; */
+  right: 10px;
+  color: #eeba2a;
+  opacity: 1;
+  transform: translateX(0) translateY(50%);
+}
+
+button {
+  transition: 300ms;
+  border-radius: 13px;
+  border-color: #d1cec5;
+  border-width: 3px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #eeba2a;
+  color: #373332;
+  padding: 8px 15px 8px 12px;
+}
+
+.cp-btn:hover {
+  transition: 300ms;
+  background-color: #eec75b;
+  color: #514c4a;
+}
+
+.clr-btn:hover {
+  transition: 300ms;
+  color: #eeba2a;
+}
+
+button:active {
+  /* transition: 200ms;
+  scale: 105%; */
+  color: #514c4a;
+}
+
+textarea {
+  font-family: "Inter", "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  font-variation-settings: "wdth" 100;
+  height: 30vh;
+  width: 30vw;
+  border-radius: 20px;
+  padding: 15px 20px;
+  resize: none;
+  outline: none;
+  background-color: #403a32;
+  color: #d1cec5;
+  border-width: 3px;
+  border-color: #d1cec5;
+  caret-color: #eeba2a;
+}
+
+textarea:disabled {
+  background-color: #d1cec5;
+  color: #504d4c;
+}
+
+textarea:disabled::placeholder {
+  color: #9e9897;
+}
+
+textarea:focus {
+  border-color: #eeba2a;
+  border-width: 3px;
+}
+
+textarea::placeholder {
+  color: #66635c;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.25rem;
+  font-weight: 700;
+  color: #d1cec5;
+  margin-bottom: 25px;
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  color: #a5a298;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #a5a298;
+  margin-bottom: 40px;
+}
+
+.container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  gap: 45px;
+}
+
+.footer {
+  width: 100%;
+  /* position: abs; */
+  /* bottom: 0;
+  left: 0; */
+  /* margin-top: auto; */
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b1918;
+  /* padding: 25px 0; */
+  height: 15vh;
+}
+
+.tags {
+  font-size: 1rem;
+  color: #eeba2a;
+}
+
+.credits {
+  font-size: 1rem;
+  color: #67645d;
+}
+
+/* ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+} */
+
+@media screen and (max-width: 450px) {
+  .title {
+    margin-top: 50px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  textarea {
+    width: 70vw;
+  }
+  .output {
+    margin-bottom: 50px;
+  }
+}
